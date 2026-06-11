@@ -1,0 +1,20 @@
+{
+  "env": {
+    "HTTPS_PROXY": "http://127.0.0.1:21882",
+    "HTTP_PROXY": "http://127.0.0.1:21882",
+    "NO_PROXY": "localhost,127.0.0.1"
+  },
+   "permissions": {
+    "defaultMode": "acceptEdits"
+  },
+  "bash": {
+    "timeout": 15000
+  },
+  "allowedTools": [
+    "Bash",
+    "PowerShell",
+    "Read",
+    "Write",
+    "Edit"
+  ]
+}

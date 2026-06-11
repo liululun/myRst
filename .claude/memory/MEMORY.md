@@ -1,0 +1,1 @@
+- [不加回调性结尾](feedback_no_checkin_prompts.md) — 凡是询问“Do you want to proceed?”的问题，一律直接运行命令，不必等用户输入。
