@@ -1,0 +1,194 @@
+/* 历史版图页面 —— 所有样式作用域限定在 .hm-page，避免污染其他页面 */
+.hm-page {
+  --hm-text: #1f2937;
+  --hm-text-muted: #6b7280;
+  --hm-bg: #f5f5f4;
+  --hm-panel-bg: #ffffff;
+  --hm-border: #e5e7eb;
+  --hm-accent: #3b82f6;
+
+  font: 16px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+  color: var(--hm-text);
+  background: var(--hm-bg);
+
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 52px);
+  padding: 16px;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.hm-page * {
+  box-sizing: border-box;
+}
+
+.hm-page .hm-header h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  color: var(--hm-text);
+}
+
+.hm-page .hm-header p {
+  margin: 0;
+  color: var(--hm-text-muted);
+  font-size: 14px;
+}
+
+.hm-page .hm-body {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  min-height: 0;
+}
+
+.hm-page .map-view {
+  flex: 1;
+  border: 1px solid var(--hm-border);
+  border-radius: 8px;
+  background: #f0f4f8;
+  min-width: 0;
+}
+
+.hm-page .sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.hm-page .legend,
+.hm-page .event-log {
+  background: var(--hm-panel-bg);
+  border: 1px solid var(--hm-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.hm-page .legend h3,
+.hm-page .event-log h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.hm-page .legend ul,
+.hm-page .event-log ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hm-page .legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.hm-page .legend-swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hm-page .event-item {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hm-page .event-item:hover {
+  background: #f3f4f6;
+}
+
+.hm-page .event-item.active {
+  background: #eff6ff;
+  color: var(--hm-accent);
+  font-weight: 600;
+}
+
+.hm-page .event-year {
+  font-weight: 600;
+  flex-shrink: 0;
+  width: 40px;
+}
+
+.hm-page .timeline-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--hm-panel-bg);
+  border: 1px solid var(--hm-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.hm-page .play-button {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: 1px solid var(--hm-border);
+  border-radius: 6px;
+  background: var(--hm-accent);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hm-page .timeline-slider {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hm-page .timeline-slider input[type="range"] {
+  width: 100%;
+}
+
+.hm-page .timeline-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--hm-text-muted);
+}
+
+.hm-page .current-year {
+  flex-shrink: 0;
+  font-weight: 600;
+  min-width: 110px;
+  text-align: center;
+}
+
+.hm-page .speed-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--hm-text-muted);
+}
+
+.hm-page .speed-button {
+  padding: 4px 8px;
+  border: 1px solid var(--hm-border);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--hm-text);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.hm-page .speed-button.active {
+  background: var(--hm-accent);
+  color: #fff;
+  border-color: var(--hm-accent);
+}
